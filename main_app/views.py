@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bird
 
 def home(request):
@@ -21,3 +21,12 @@ def bird_details(request, bird_id):
 class BirdCreate(CreateView):
     model = Bird
     fields = '__all__'
+    success_url = '/birds/'
+
+class BirdUpdate(UpdateView):
+    models = Bird
+    fields=['species', 'description', 'age']
+
+class BirdDelete(DeleteView):
+    models = Bird
+    success_url= '/birds/'

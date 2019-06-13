@@ -14,6 +14,10 @@
             <p>This is a hatchling</p>
             {% endif %}
     </div>
+    <div class="card-action">
+        <a href="{url 'bird_update' bird.id}">Update</a>
+        <a href="{url 'bird_delete' bird.id}">Delete</a>
+    </div>
 </div>
 {% endblock %}
 <!--Figure out if there is a reverse method, in the models file-->

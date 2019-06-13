@@ -4,7 +4,7 @@
   #The action part of fomr is left empty, so the method to go to the same url that displays it.
         {%csrf_token%}
         <table>
-            {{% form.as_table %}}
+            {{ form.as_table }}
         </table>
         <input type="submit" value="Submit!" class="btn">
     </form>

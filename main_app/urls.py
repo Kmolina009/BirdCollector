@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from django.urls import reverse
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
@@ -8,4 +8,6 @@ urlpatterns = [
     path('birds/<int:bird_id>', views.bird_details, name='details'),
     #creates a urlpath  for a new bird
     path('birds/create/', views.BirdCreate.as_view(), name='birds_create'),
+    path('birds/<int:pk>/update/', views.BirdUpdate.as_view(), name='birds_update'),
+    path('birds/<int:pk>/delete/', views.BirdDelete.as_view(), name='birds_delete'),
 ]
