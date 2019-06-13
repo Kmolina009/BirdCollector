@@ -17,8 +17,10 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Bird Collector</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/birds">See All Birds</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index'%}">See All Birds</a></li>
+                    <li><a href="{% url 'birds_create'%}">See All Birds</a></li>
+                    #url template allows for a level of flexibility
                 </ul>
             </div>
         </nav>
