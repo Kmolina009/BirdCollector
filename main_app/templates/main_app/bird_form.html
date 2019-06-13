@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block content%}
+    <form action="" method="post">
+  #The action part of fomr is left empty, so the method to go to the same url that displays it.
+        {%csrf_token%}
+        <table>
+            {{% form.as_table %}}
+        </table>
+        <input type="submit" value="Submit!" class="btn">
+    </form>
+{% endblock%}
+
+#when using form.as_table, remeber to double {}
