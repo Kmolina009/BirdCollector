@@ -17,9 +17,7 @@ def birds_index(request):
 def bird_details(request, bird_id):
     bird = Bird.objects.get(id =  bird_id)
     return render(request, 'birds/details.html',{'bird' : bird})
-#If your seeing this, continue working on rendering the views for bird index
 
-class BirdeCreate(CreateView):
+class BirdCreate(CreateView):
     model = Bird
     fields = '__all__'
-    
