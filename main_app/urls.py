@@ -5,7 +5,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('birds/', views.birds_index, name='index'),
-    path('birds/<int:bird_id>', views.bird_details, name='details'),
+    path('birds/<int:bird_id>/', views.birds_detail, name='detail'),
     #creates a urlpath  for a new bird
     path('birds/create/', views.BirdCreate.as_view(), name='birds_create'),
     path('birds/<int:pk>/update/', views.BirdUpdate.as_view(), name='birds_update'),
